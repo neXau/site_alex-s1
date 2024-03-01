@@ -3,7 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
-#gradient-bg {
+html.light #gradient-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 25%,
+    rgba(255, 255, 255, 0.5) 70%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+html.dark #gradient-bg {
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 25%,
@@ -12,24 +21,36 @@
   );
 }
 
-#gradient-bg-2 {
-    background: linear-gradient(90deg, rgba(2, 27, 17, 0.2) 25%, rgba(2, 27, 17, 0) 100%);
-    -webkit-backdrop-filter: opacity(0.3) blur(5px);
-    backdrop-filter: opacity(0.3) blur(5px);
+html.light #gradient-bg-2 {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0) 100%);
+  -webkit-backdrop-filter: opacity(0.3) blur(5px);
+  backdrop-filter: opacity(0.8) blur(5px);
 }
 
-#gradient-radial {
-
-
-    background: rgb(20, 241, 149);
-    filter: blur(130px);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+html.dark #gradient-bg-2 {
+  background: linear-gradient(90deg, rgba(2, 27, 17, 0.2) 25%, rgba(2, 27, 17, 0) 100%);
+  -webkit-backdrop-filter: opacity(0.3) blur(5px);
+  backdrop-filter: opacity(0.3) blur(5px);
 }
 
-@media screen and (min-width: 1921px)  {
+html.light #gradient-radial {
+  background: rgb(20, 241, 149);
+  filter: blur(130px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html.dark #gradient-radial {
+  background: rgb(20, 241, 149);
+  filter: blur(130px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* @media screen and (min-width: 1921px)  {
     #line {
         display: none;
     }
-}
+} */

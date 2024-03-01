@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8" />
@@ -10,7 +10,7 @@
 
 
 
-<body>
+<body class="dark:bg-black">
 
     <div class="lines absolute w-full h-full z-10">
         <svg id="line" width="100%" height="503" viewBox="0 0 1920 503" fill="none" xmlns="http://www.w3.org/2000/svg" class="absolute">
@@ -26,7 +26,7 @@
             </defs>
         </svg>
     </div>
-    <div id="particles-js" class="absolute bg-black h-screen w-full top-0"></div>
+    <div id="particles-js" class="absolute h-screen w-full top-0 dark:bg-black"></div>
     <div id="gradient-bg" class="absolute h-screen top-0 left-0 right-0 bottom-0"></div>
     <div id="gradient-bg-2" class="absolute top-0 left-0 right-[45%] bottom-0 z-[15]"></div>
 
@@ -34,24 +34,42 @@
 
     <header class="absolute w-full z-50">
 
-        <div class="container mx-auto">
-            <nav class="text-white py-10">
+        <div class="container mx-auto flex justify-between">
+            <nav class="py-10 dark:text-white">
                 <ul class="flex">
-                    <li class="px-5">About Me</li>
-                    <li class="px-5">Offers</li>
-                    <li class="px-5">Get Started</li>
-                    <li class="px-5">How It Works</li>
-                    <li class="px-5">FAQ</li>
-                    <li class="px-5">Contact</li>
+                    <li class="px-5">
+                        <a href="">About Me</a>
+                        </li>
+                    <li class="px-5">
+                        <a href="">Offers</a>
+                    </li>
+                    <li class="px-5">
+                        <a href="">Get Started</a>
+                    </li>
+                    <li class="px-5">
+                        <a href="">How It Works</a>
+                    </li>
+                    <li class="px-5">
+                        <a href="">FAQ</a>
+                    </li>
+                    <li class="px-5">
+                        <a href="">Contact</a>
+                    </li>
                 </ul>
             </nav>
+
+            <div class="py-10">
+                <button class="dark:text-white" onclick="switchThemeMode()">Swither</button>
+            </div>
         </div>
+
+        
 
     </header>
 
     <section class="absolute z-20 w-full h-full flex items-center">
         <div class="container mx-auto flex">
-            <div class="text-white w-1/2">
+            <div class="w-1/2 dark:text-white">
                 <h2>
                     Solana Validator
                 </h2>
@@ -67,14 +85,14 @@
                 </p>
             </div>
 
-            <div class="w-1/2 relative">
+            <div class="w-1/2 relative flex justify-center ">
                 <iframe 
                 id="staking-kiwi-widget-0" 
                 scrolling="no" 
                 frameborder="0" 
                 allowtransparency="true" 
                 allowfullscreen="true" 
-                class="invert hue-rotate-180 z-[30]" 
+                class="dark:invert dark:hue-rotate-180 z-[30]" 
                 style="position: static; visibility: visible; width: 472px; height: 302px" 
                 title="Alex S1" 
                 src="https://widget.staking.kiwi/?validator=HxRrsnbc6K8CdEo3LCTrSUkFaDDxv9BdJsTDzBKnUVWH" ></iframe>
@@ -86,7 +104,7 @@
 
     <div class="h-screen w-full"></div>
 
-    <main class="bg-black text-white">
+    <main class="bg-white dark:bg-black dark:text-white">
         <section>
             <div class="container mx-auto">
                 <div>
@@ -125,7 +143,7 @@
         </section>
     </main>
 
-
+    <script src="./js/main.js"></script>
 
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- stats.js lib -->
