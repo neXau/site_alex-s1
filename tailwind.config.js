@@ -14,6 +14,17 @@ module.exports = {
         // '2xl': '1920px',
       },
     },
+
+    colors: {
+      'white' : '#ffffff',
+      'black' : '#000000',
+      'sol-green' : '#14F195',
+      'sol-purple' : '#9945FF',
+    },
+
+    fontFamily: {
+      'main': ['"Barlow"', 'system-ui', 'ui-sans-serif']
+    }
   },
   plugins: [],
 }

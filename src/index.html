@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./css/main-x.css" rel="stylesheet" />
+    <link href="./assets/css/main-x.css" rel="stylesheet" />
     <title>Alex S1</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 
@@ -31,35 +35,47 @@
     <div id="gradient-bg-2" class="absolute top-0 left-0 right-[45%] bottom-0 z-[15]"></div>
 
 
+    
 
     <header class="absolute w-full z-50">
 
         <div class="container mx-auto flex justify-between">
-            <nav class="py-10 dark:text-white">
-                <ul class="flex">
-                    <li class="px-5">
+            <nav class="py-10 font-main dark:text-white">
+                <ul class="flex flex-wrap">
+                    <li class="px-5 w-full md:w-[unset]">
                         <a href="">About Me</a>
                         </li>
-                    <li class="px-5">
+                    <li class="px-5 w-full md:w-[unset]">
                         <a href="">Offers</a>
                     </li>
-                    <li class="px-5">
+                    <li class="px-5 w-full md:w-[unset]">
                         <a href="">Get Started</a>
                     </li>
-                    <li class="px-5">
+                    <li class="px-5 w-full md:w-[unset]">
                         <a href="">How It Works</a>
                     </li>
-                    <li class="px-5">
+                    <li class="px-5 w-full md:w-[unset]">
                         <a href="">FAQ</a>
                     </li>
-                    <li class="px-5">
+                    <li class="px-5 w-full md:w-[unset]">
                         <a href="">Contact</a>
                     </li>
                 </ul>
             </nav>
 
             <div class="py-10">
-                <button class="dark:text-white" onclick="switchThemeMode()">Swither</button>
+                <label class="flex relative h-7 w-12 flex-shrink-0 cursor-pointer p-1">
+                    <input onclick="switchThemeMode()" type="checkbox" class="peer hidden">
+                    <span class="inset-0 rounded-full absolute top-0 left-0 transition duration-200 ease-in-out bg-sol-purple dark:bg-sol-green w-12"></span>
+                    <span class="translate-x-0 inline-block h-5 w-5 transform rounded-full bg-white dark:bg-black shadow transition duration-200 ease-in-out peer-checked:translate-x-5"></span>
+                </label>
+
+                <button id="burgerBtn" class="block ">
+                    <svg class="w-6 h-6" fill="#fff" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+
             </div>
         </div>
 
@@ -68,24 +84,24 @@
     </header>
 
     <section class="absolute z-20 w-full h-full flex items-center">
-        <div class="container mx-auto flex">
-            <div class="w-1/2 dark:text-white">
-                <h2>
+        <div class="container mx-auto flex flex-wrap">
+            <div class="w-full md:w-1/2 dark:text-white">
+                <h2 class="text-2xl text-sol-purple dark:text-sol-green">
                     Solana Validator
                 </h2>
-                <h1>
+                <h1 class="text-5xl">
                     Empower Your Crypto
                     Portfolio with Alex S1
                 </h1>
-                <p>
-                    Experience unparalleled performance and security with our distributed infrastructure. 
+                <p class="text-base">
+                    Experience unparalleled performance and security with our <span class="text-sol-green dark:text-sol-purple font-black">distributed infrastructure</span>. 
                 </p>
-                <p>
+                <p  class="text-base">
                     Stake confidently and reap the rewards of a trusted validator partner.
                 </p>
             </div>
 
-            <div class="w-1/2 relative flex justify-center ">
+            <div class="w-full md:w-1/2 relative flex justify-center ">
                 <iframe 
                 id="staking-kiwi-widget-0" 
                 scrolling="no" 
@@ -107,52 +123,77 @@
     <main class="bg-white dark:bg-black dark:text-white">
         <section>
             <div class="container mx-auto">
-                <div>
-                    About Alex S1
-                </div>
-                <div>
-                    As a dedicated Solana validator, Alex S1 is your go-to expert for ensuring the security, efficiency, and reliability of your Solana network transactions. With a wealth of experience and a commitment to excellence, Alex S1 stands as a trusted partner in navigating the complexities of blockchain validation.
+                
+                <div class="dd">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+
+
+                    <div class="relative overflow-auto p-8">
+                        <div id="alexs1-card" class="overflow-visible relative max-w-3xl mx-auto flex items-center gap-6">
+                            
+                            <div class="absolute -left-100 w-200 h-200" id="alexs1-photo-img">
+                                <img class="w-100% h-100% rounded-full relative z-10 shadow-lg"  src="assets/img/alexs1-photo.png">
+                            </div>
+                            
+                            <div class="flex flex-col py-20 pl-64">
+                                <h3 class="text-5xl pb-5">About Alex S1</h3>
+                                <span class="">
+                                    As a dedicated Solana validator, Alex S1 is your go-to expert for ensuring the security, efficiency, 
+                                    and reliability of your Solana network transactions. 
+                                    With a wealth of experience and a commitment to excellence, 
+                                    Alex S1 stands as a trusted partner in navigating the complexities of blockchain validation.
+                                </span>
+                            </div>
+                      </div>
+                    </div>
                 </div>
 
 
-                <div>
-                    <div>Expertise</div>
-                    <div>
-                        With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
+                <div class="flex columns-4 py-20">
+                    <div class="m-5 p-5">
+                        <div>Expertise</div>
+                        <div>
+                            With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div>Expertise</div>
-                    <div>
-                        With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
+                    <div class="m-5 p-5">
+                        <div>Expertise</div>
+                        <div>
+                            With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div>Expertise</div>
-                    <div>
-                        With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
+                    <div class="m-5 p-5">
+                        <div>Expertise</div>
+                        <div>
+                            With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div>Expertise</div>
-                    <div>
-                        With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
+                    <div class="m-5 p-5">
+                        <div>Expertise</div>
+                        <div>
+                            With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <script src="./js/main.js"></script>
+    <script src="./assets/js/main.js"></script>
 
     <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- stats.js lib -->
     <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
-    <script src="./js/particles.js"></script>
+    <script src="./assets/js/particles.js"></script>
 
     <!-- partial -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js'></script>
-    <script src="./js/alex-s1-lines.js"></script>
+    <script src="./assets/js/alex-s1-lines.js"></script>
 </body>
 
 </html>
