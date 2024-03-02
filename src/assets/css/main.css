@@ -3,14 +3,26 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --alexs1-black: rgba(0,0,0);
+  --alexs1-white: rgba(255,255,255);
+  --sol-green: rgba(20,241,149);
+  --sol-purple: rgba(153,69,255);
+  --sol-gradient: linear-gradient(
+    90deg, 
+    var(--sol-purple) 0%, 
+    var(--sol-green) 100%
+  );
+}
+
 html.light *::selection {
-  background-color: rgba(20,241,149);
-  color: #000;
+  background-color: var(--sol-green);
+  color: var(--alexs1-black);
 }
 
 html.dark *::selection {
-  background-color: rgba(153,69,255);
-  color: #000;
+  background-color: var(--sol-purple);
+  color: var(--alexs1-black);
 }
 
 html.light #gradient-bg {
@@ -52,7 +64,7 @@ html.dark #gradient-bg-2 {
 }
 
 html.light #gradient-radial {
-  background: rgb(20, 241, 149);
+  background: var(--sol-green);
   filter: blur(130px);
   top: 50%;
   left: 50%;
@@ -60,7 +72,7 @@ html.light #gradient-radial {
 }
 
 html.dark #gradient-radial {
-  background: rgb(20, 241, 149);
+  background: var(--sol-green);
   filter: blur(130px);
   top: 50%;
   left: 50%;
@@ -92,8 +104,8 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
   bottom: -4px;
   left: -4px;
   right: -4px;
-  background: rgb(153,69,255);
-  background: linear-gradient(90deg, rgba(153,69,255,1) 0%, rgba(20,241,149,1) 100%);
+  background: var(--sol-purple);
+  background: var(--sol-gradient);
   position: absolute;
   border-radius: 50%;
   transition: 1s;
@@ -133,7 +145,7 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
 #wrapper-form-input-name input:focus,
 #wrapper-form-input-email input:focus,
 #wrapper-form-textarea textarea:focus {
-  outline: 1px dotted #14F195;
+  outline: 1px dotted var(--sol-green);
 }
 
 #wrapper-form-input-name input::placeholder,
@@ -155,21 +167,35 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
 #wrapper-form-input-email input:not(:placeholder-shown) + label,
 #wrapper-form-textarea textarea:not(:placeholder-shown) + label {
   top: 0rem;
-  color: #14F195;
+  color: var(--sol-green);
   font-size: 0.75rem;
 }
 
 
 
 
-.alexs1-stepcard:hover {
-  background-color: #000;
+html.dark .alexs1-stepcard:hover,
+html.dark .alexs1-stepcard::after {
+  background-color: var(--alexs1-black);
+  transition: 0.85s;
 }
 
-.alexs1-stepcard:hover .alexs1-stepcard-label {
-  background-color: #000;
+html.dark .alexs1-stepcard:hover .alexs1-stepcard-label {
+  background-color: var(--alexs1-black);
   border: none;
 }
+
+html.light .alexs1-stepcard:hover,
+html.light .alexs1-stepcard::after {
+  background-color: var(--alexs1-white);
+  transition: 1s;
+}
+
+html.light .alexs1-stepcard:hover .alexs1-stepcard-label {
+  background-color: var(--alexs1-white);
+  border: none;
+}
+
 
 .alexs1-stepcard .alexs1-stepcard-label::before {
   content: '';
@@ -177,8 +203,8 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
   bottom: -2px;
   left: -2px;
   right: -2px;
-  background: rgb(153,69,255);
-  background: linear-gradient(90deg, rgba(153,69,255,1) 0%, rgba(20,241,149,1) 100%);
+  background: var(--sol-purple);
+  background: var(--sol-gradient);
   position: absolute;
   transition: 1s;
   z-index: -1;
@@ -192,8 +218,8 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
   bottom: -2px;
   left: -2px;
   right: -2px;
-  background: rgb(153,69,255);
-  background: linear-gradient(90deg, rgba(153,69,255,1) 0%, rgba(20,241,149,1) 100%);
+  background: var(--sol-purple);
+  background: var(--sol-gradient);
   position: absolute;
   transition: 1s;
   z-index: -1;
@@ -208,11 +234,10 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
   left: 0px;
   right: 0px;
   position: absolute;
-  background-color: #000;
+  background-color: var(--alexs1-black);
   z-index: -1;
   border-radius: 1rem;
   opacity: 0;
-  transition: 0.85s;
 }
 
 .alexs1-stepcard:hover::after,
@@ -221,6 +246,10 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
   opacity: 1;
 }
 
+
+#anchor-faq details summary::-webkit-details-marker {
+  display: none;
+}
 
 
 /* @media screen and (min-width: 1921px)  {
