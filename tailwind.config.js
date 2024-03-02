@@ -21,12 +21,15 @@ module.exports = {
       'sol-green' : '#14F195',
       'sol-purple' : '#9945FF',
       'light-black' : '#100C14',
+      'invisible' : 'rgba(0,0,0,0)'
     },
 
     fontFamily: {
       'main': ['"Barlow"', 'system-ui', 'ui-sans-serif']
     }
   },
+
+
   plugins: [],
 }
 

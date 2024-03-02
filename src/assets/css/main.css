@@ -108,6 +108,60 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
 }
 
 
+#anchor-get-started::before {
+  content: '';
+  background-image: url('/assets/img/get-started-section-bg.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  opacity: 0.2;
+}
+
+
+/* Form Inputs Style */
+
+#wrapper-form-input-name label,
+#wrapper-form-input-email label,
+#wrapper-form-textarea label {
+  transition: 0.6s;
+}
+
+#wrapper-form-input-name input:focus,
+#wrapper-form-input-email input:focus,
+#wrapper-form-textarea textarea:focus {
+  outline: 1px dotted #14F195;
+}
+
+#wrapper-form-input-name input::placeholder,
+#wrapper-form-input-email input::placeholder,
+#wrapper-form-textarea textarea::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+
+#wrapper-form-input-name input:placeholder-shown + label,
+#wrapper-form-input-email input:placeholder-shown + label,
+#wrapper-form-textarea textarea:placeholder-shown + label {
+  top: 1.75rem;
+}
+
+#wrapper-form-input-name input:focus + label,
+#wrapper-form-input-email input:focus + label,
+#wrapper-form-textarea textarea:focus + label,
+#wrapper-form-input-name input:not(:placeholder-shown) + label,
+#wrapper-form-input-email input:not(:placeholder-shown) + label,
+#wrapper-form-textarea textarea:not(:placeholder-shown) + label {
+  top: 0rem;
+  color: #14F195;
+  font-size: 0.75rem;
+}
+
+
+
+
 /* @media screen and (min-width: 1921px)  {
     #line {
         display: none;
