@@ -20,6 +20,7 @@ module.exports = {
       'black' : '#000000',
       'sol-green' : '#14F195',
       'sol-purple' : '#9945FF',
+      'light-black' : '#100C14',
     },
 
     fontFamily: {

@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind sizing;
+@tailwind components;
+@tailwind utilities;
+
+html.light *::selection {
+  background-color: rgba(20,241,149);
+  color: #000;
+}
+
+html.dark *::selection {
+  background-color: rgba(153,69,255);
+  color: #000;
+}
+
+html.light #gradient-bg {
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 1) 25%, 
+    rgba(255, 255, 255, 0.5) 70%, 
+    rgba(255, 255, 255, 0.2) 100%
+  );
+}
+
+html.dark #gradient-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0.5) 70%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+html.light #gradient-bg-2 {
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 0.2) 25%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  -webkit-backdrop-filter: opacity(0.3) blur(5px);
+  backdrop-filter: opacity(0.8) blur(5px);
+}
+
+html.dark #gradient-bg-2 {
+  background: linear-gradient(
+    90deg, 
+    rgba(2, 27, 17, 0.2) 25%, 
+    rgba(2, 27, 17, 0) 100%
+  );
+  -webkit-backdrop-filter: opacity(0.3) blur(5px);
+  backdrop-filter: opacity(0.3) blur(5px);
+}
+
+html.light #gradient-radial {
+  background: rgb(20, 241, 149);
+  filter: blur(130px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html.dark #gradient-radial {
+  background: rgb(20, 241, 149);
+  filter: blur(130px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+html.dark #alexs1-card #alexs1-photo-img img {
+  transition: 1s;
+  filter: opacity(1);
+}
+
+html.dark #alexs1-card:hover #alexs1-photo-img img {
+  filter: opacity(0.6);
+}
+
+html.light #alexs1-card #alexs1-photo-img img {
+  transition: 1s;
+  filter: opacity(1);
+}
+
+html.light #alexs1-card:hover #alexs1-photo-img img {
+  filter: opacity(0.6) contrast(0.5) brightness(1.4);
+}
+
+#alexs1-photo-img::after {
+  content: '';
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  right: -4px;
+  background: rgb(153,69,255);
+  background: linear-gradient(90deg, rgba(153,69,255,1) 0%, rgba(20,241,149,1) 100%);
+  position: absolute;
+  border-radius: 50%;
+  transition: 1s;
+}
+
+#alexs1-card:hover #alexs1-photo-img::after {
+  transform: rotate(360deg);
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+}
+
+
+/* @media screen and (min-width: 1921px)  {
+    #line {
+        display: none;
+    }
+} */
