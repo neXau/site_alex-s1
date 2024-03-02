@@ -162,6 +162,67 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
 
 
 
+.alexs1-stepcard:hover {
+  background-color: #000;
+}
+
+.alexs1-stepcard:hover .alexs1-stepcard-label {
+  background-color: #000;
+  border: none;
+}
+
+.alexs1-stepcard .alexs1-stepcard-label::before {
+  content: '';
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: rgb(153,69,255);
+  background: linear-gradient(90deg, rgba(153,69,255,1) 0%, rgba(20,241,149,1) 100%);
+  position: absolute;
+  transition: 1s;
+  z-index: -1;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.alexs1-stepcard::before { 
+  content: '';
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: rgb(153,69,255);
+  background: linear-gradient(90deg, rgba(153,69,255,1) 0%, rgba(20,241,149,1) 100%);
+  position: absolute;
+  transition: 1s;
+  z-index: -1;
+  border-radius: 1rem;
+  opacity: 0;
+}
+
+.alexs1-stepcard::after {
+  content: '';
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  background-color: #000;
+  z-index: -1;
+  border-radius: 1rem;
+  opacity: 0;
+  transition: 0.85s;
+}
+
+.alexs1-stepcard:hover::after,
+.alexs1-stepcard:hover .alexs1-stepcard-label::before,
+.alexs1-stepcard:hover::before {
+  opacity: 1;
+}
+
+
+
 /* @media screen and (min-width: 1921px)  {
     #line {
         display: none;
