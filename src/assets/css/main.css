@@ -125,6 +125,7 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
   background-image: url('/assets/img/get-started-section-bg.png');
   background-repeat: no-repeat;
   background-position: right;
+  background-size: contain;
   left: 0;
   right: 0;
   top: 0;
@@ -251,6 +252,26 @@ html.light .alexs1-stepcard:hover .alexs1-stepcard-label {
   display: none;
 }
 
+
+@media screen and (max-width: 768px)  {
+
+  #header-main-menu {
+    opacity: 0;
+    overflow: hidden;
+    height: 0.1rem;
+    transition: 0.5s;
+  }
+
+  #header-main-menu.opened {
+    opacity: 1;
+    overflow: unset;
+    height: unset;
+  }
+
+  #header-main.menu_opened {
+    backdrop-filter: blur(20px);
+  }
+}
 
 /* @media screen and (min-width: 1921px)  {
     #line {

@@ -37,30 +37,30 @@
 
     
 
-    <header class="absolute w-full z-50">
+    <header id="header-main" class="absolute top-1 md:top-[unset] w-full z-50 px-5 md:px-[unset]">
 
         <div class="container mx-auto flex justify-between">
-            <nav class="py-10 font-main dark:text-white">
+            <nav id="header-main-menu" class="py-10 font-main dark:text-white">
                 <ul class="flex flex-wrap">
-                    <li class="px-5 w-full md:w-[unset]">
+                    <li class="md:pr-5 w-full md:w-[unset]">
                         <a href="#anchor-about-me">About Me</a>
                     </li>
-                    <li class="px-5 w-full md:w-[unset]">
+                    <li class="md:px-5 w-full md:w-[unset]">
                         <a href="#anchor-get-started">Get Started</a>
                     </li>
-                    <li class="px-5 w-full md:w-[unset]">
+                    <li class="md:px-5 w-full md:w-[unset]">
                         <a href="#anchor-how-it-works">How It Works</a>
                     </li>
-                    <li class="px-5 w-full md:w-[unset]">
+                    <li class="md:px-5 w-full md:w-[unset]">
                         <a href="#anchor-faq">FAQ</a>
                     </li>
-                    <li class="px-5 w-full md:w-[unset]">
+                    <li class="md:px-5 w-full md:w-[unset]">
                         <a href="#anchor-contact">Contact</a>
                     </li>
                 </ul>
             </nav>
 
-            <div class="py-10 flex">
+            <div class="py-10 flex items-center">
                 <label class="flex relative h-7 w-12 flex-shrink-0 cursor-pointer p-1">
                     <input onclick="switchThemeMode()" type="checkbox" class="peer hidden">
                     <span class="inset-0 rounded-full absolute top-0 left-0 transition duration-200 ease-in-out bg-sol-purple dark:bg-sol-green w-12"></span>
@@ -68,10 +68,15 @@
                 </label>
 
                 <button id="burgerBtn" class="block text-black dark:text-white ml-5 md:hidden">
-                    <svg class="w-6 h-6" fill="#fff" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="burgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
+                    <svg id="crossIcon" class="hidden w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
                 </button>
+                
+                
 
             </div>
         </div>
@@ -80,21 +85,21 @@
 
     </header>
 
-    <section class="absolute z-20 w-full h-full flex items-center">
+    <section class="relative md:absolute z-20 w-full md:h-full flex items-center mt-20 md:mt-auto px-5 md:px-[unset]">
         <div class="container mx-auto flex flex-wrap">
-            <div class="w-full md:w-1/2 dark:text-white">
-                <h2 class="text-2xl text-sol-purple dark:text-sol-green pb-5">
+            <div class="w-full md:w-1/2 dark:text-white my-20 md:my-auto">
+                <h2 class="text-2xl text-sol-purple dark:text-sol-green pb-5 font-main">
                     Solana Validator
                 </h2>
-                <h1 class="text-5xl pb-8">
+                <h1 class="text-5xl pb-8 font-main font-bold">
                     Empower Your Crypto
                     Portfolio with Alex S1
                 </h1>
-                <p class="text-base pb-2">
-                    Experience unparalleled performance and security with our <span class="text-sol-green dark:text-sol-purple font-black">distributed infrastructure</span>. 
+                <p class="text-base pb-2 font-main text-xl">
+                    <span class="text-sol-green dark:text-sol-purple font-bold">Experience</span> unparalleled <span class="text-sol-green dark:text-sol-purple font-bold">performance</span> and <span class="text-sol-green dark:text-sol-purple font-bold">security</span> with our distributed infrastructure. 
                 </p>
-                <p  class="text-base">
-                    Stake confidently and reap the rewards of a trusted validator partner.
+                <p  class="text-base font-main text-xl">
+                    <span class="text-sol-green dark:text-sol-purple font-bold">Stake confidently</span> and <span class="text-sol-green dark:text-sol-purple font-bold">reap the rewards</span> of a trusted validator partner.
                 </p>
             </div>
 
@@ -105,8 +110,8 @@
                 frameborder="0" 
                 allowtransparency="true" 
                 allowfullscreen="true" 
-                class="dark:invert dark:hue-rotate-180 z-[30]" 
-                style="position: static; visibility: visible; width: 472px; height: 302px" 
+                class="dark:invert dark:hue-rotate-180 z-[30] w-full h-[500px] xl:w-[472px] xl:h-[302px]" 
+                style="position: static; visibility: visible;" 
                 title="Alex S1" 
                 src="https://widget.staking.kiwi/?validator=HxRrsnbc6K8CdEo3LCTrSUkFaDDxv9BdJsTDzBKnUVWH" ></iframe>
 
@@ -115,24 +120,25 @@
         </div>
     </section>
 
-    <div class="h-screen w-full"></div>
+    <div class="h-screen w-full hidden md:block"></div>
+    <!-- <div class="h-96 w-full md:hidden"></div> -->
 
     <main class="bg-white dark:bg-black dark:text-white">
-        <section id="anchor-about-me">
+        <section id="anchor-about-me mt-20 md:mt-[unset]">
             <div class="container mx-auto">
                 
                 <div class="dd">
 
                     <div class="relative overflow-auto p-8">
-                        <div id="alexs1-card" class="overflow-visible relative max-w-3xl mx-auto flex items-center gap-6">
+                        <div id="alexs1-card" class="overflow-visible relative max-w-3xl md:mx-auto md:flex items-center grid grid-cols-1 ">
                             
-                            <div class="absolute -left-100 w-200 h-200" id="alexs1-photo-img">
+                            <div class="md:absolute relative md:-left-100 w-[200px] h-[200px] mx-auto" id="alexs1-photo-img">
                                 <img class="w-100% h-100% rounded-full relative z-10 shadow-lg"  src="assets/img/alexs1-photo.png">
                             </div>
                             
-                            <div class="flex flex-col py-20 pl-64">
-                                <h3 class="text-5xl pb-5">About Alex S1</h3>
-                                <span class="">
+                            <div class="flex flex-col py-20 md:pl-64">
+                                <h3 class="text-5xl pb-5 font-main">About Alex S1</h3>
+                                <span class="font-main">
                                     As a dedicated Solana validator, Alex S1 is your go-to expert for ensuring the security, efficiency, 
                                     and reliability of your Solana network transactions. 
                                     With a wealth of experience and a commitment to excellence, 
@@ -148,28 +154,28 @@
         <section id="anchor-ff">
             <div class="container mx-auto">
 
-                <div class="flex columns-4 py-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-1 py-20">
                     <div class="m-3 px-7 py-10 drop-shadow-xl dark:bg-light-black bg-white rounded-md bg-[url('/assets/img/card-lines.svg')] bg-cover bg-no-repeat">
-                        <h3 class="text-2xl mb-5">Expertise</h3>
-                        <p>
+                        <h3 class="text-2xl mb-5 font-main">Expertise</h3>
+                        <p class="font-main">
                             With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
                         </p>
                     </div>
                     <div class="m-3 px-7 py-10 drop-shadow-xl dark:bg-light-black bg-white rounded-md bg-[url('/assets/img/card-lines.svg')] bg-cover bg-no-repeat">
-                        <h3 class="text-2xl mb-5">Reliability</h3>
-                        <p>
+                        <h3 class="text-2xl mb-5 font-main">Reliability</h3>
+                        <p class="font-main">
                             Your network's security is our top priority. Alex S1 employs robust security measures and best practices to safeguard your assets and uphold the integrity of the Solana ecosystem.
                         </p>
                     </div>
                     <div class="m-3 px-7 py-10 drop-shadow-xl dark:bg-light-black bg-white rounded-md bg-[url('/assets/img/card-lines.svg')] bg-cover bg-no-repeat">
-                        <h3 class="text-2xl mb-5">Dedicated Support</h3>
-                        <p>
+                        <h3 class="text-2xl mb-5 font-main">Dedicated Support</h3>
+                        <p class="font-main">
                             With in-depth knowledge of Solana's architecture and protocols, Alex S1 brings unparalleled expertise to the table. You can trust in our ability to optimize your network performance and enhance your overall experience.
                         </p>
                     </div>
                     <div class="m-3 px-7 py-10 drop-shadow-xl dark:bg-light-black bg-white rounded-md bg-[url('/assets/img/card-lines.svg')] bg-cover bg-no-repeat">
-                        <h3 class="text-2xl mb-5">Improvement</h3>
-                        <p>
+                        <h3 class="text-2xl mb-5 font-main">Improvement</h3>
+                        <p class="font-main">
                             The blockchain landscape is constantly evolving, and so are we. Alex S1 is committed to staying ahead of the curve, continuously refining our processes and technologies to deliver the best possible results for our clients.
                         </p>
                     </div>
@@ -181,37 +187,37 @@
             </div>
         </section>
 
-        <section id="anchor-get-started" class="relative">
-            <div class="container mx-auto h-[900px] py-[113px] z-10 relative">
-                <h2 class="text-4xl pb-10">
+        <section id="anchor-get-started" class="relative px-5 md:px-[unset">
+            <div class="container mx-auto xl:h-[900px] py-[113px] z-10 relative">
+                <h2 class="text-4xl pb-10 font-main font-bold">
                     Get Started
                 </h2>
                 <p>
                     Explains the process of using Solana Validator, including setting up a validator node, staking SOL tokens, and earning rewards.
                 </p>
 
-                <div class="flex columns-3 py-20 mt-10">
+                <div class="xl:flex xl:columns-3 py-20 mt-10">
                     <div class="m-3 px-7 py-10 drop-shadow-xl rounded-xl relative alexs1-stepcard">
-                        <div class="absolute -top-12 left-0 border border-white rounded-full h-10 w-10 flex justify-center items-center alexs1-stepcard-label">1</div>
-                        <div class="alexs1-stepline -top-8 h-[4px] left-10 -right-5 bg-white/25 absolute"></div>
-                        <h3 class="text-2xl mb-5">Step 1: Set up a Validator Node</h3>
-                        <p>
+                        <div class="absolute top-2 right-2 xl:right-auto xl:-top-12 xl:left-0 border border-white rounded-full h-10 w-10 flex justify-center items-center alexs1-stepcard-label">1</div>
+                        <div class="alexs1-stepline xl:-top-8 xl:h-[4px] xl:left-10 xl:-right-5 bg-white/25 absolute"></div>
+                        <h3 class="text-2xl mb-5 font-main">Step 1: Set up a Validator Node</h3>
+                        <p class="font-main">
                             Follow our step-by-step guide to set up a Solana validator node on your preferred platform.
                         </p>
                     </div>
                     <div class="m-3 px-7 py-10 drop-shadow-xl rounded-xl relative alexs1-stepcard">
-                        <div class="absolute -top-12 left-0 border border-white rounded-full h-10 w-10 flex justify-center items-center alexs1-stepcard-label">2</div>
-                        <div class="alexs1-stepline -top-8 h-[4px] left-10 -right-5 bg-white/25 absolute"></div>
-                        <h3 class="text-2xl mb-5">Step 2: Stake SOL Tokens</h3>
-                        <p>
+                        <div class="absolute top-2 right-2 xl:right-auto xl:-top-12 xl:left-0 border border-white rounded-full h-10 w-10 flex justify-center items-center alexs1-stepcard-label">2</div>
+                        <div class="alexs1-stepline xl:-top-8 xl:h-[4px] xl:left-10 xl:-right-5 bg-white/25 absolute"></div>
+                        <h3 class="text-2xl mb-5 font-main">Step 2: Stake SOL Tokens</h3>
+                        <p class="font-main">
                             Once your validator node is set up, stake your SOL tokens to participate in the Solana network consensus.
                         </p>
                     </div>
                     <div class="m-3 px-7 py-10 drop-shadow-xl rounded-xl relative alexs1-stepcard">
-                        <div class="absolute -top-12 left-0 border border-white rounded-full h-10 w-10 flex justify-center items-center alexs1-stepcard-label">3</div>
-                        <div class="alexs1-stepline -top-8 h-[4px] left-10 -right-5 bg-white/25 absolute"></div>
-                        <h3 class="text-2xl mb-5">Step 3: Earn Rewards</h3>
-                        <p>
+                        <div class="absolute top-2 right-2 xl:right-auto xl:-top-12 xl:left-0 border border-white rounded-full h-10 w-10 flex justify-center items-center alexs1-stepcard-label">3</div>
+                        <div class="alexs1-stepline xl:-top-8 xl:h-[4px] xl:left-10 xl:-right-5 bg-white/25 absolute"></div>
+                        <h3 class="text-2xl mb-5 font-main">Step 3: Earn Rewards</h3>
+                        <p class="font-main">
                             By running a validator node and staking SOL tokens, you can earn rewards in the form of additional SOL tokens.
                         </p>
                     </div>
@@ -220,47 +226,47 @@
             </div>
         </section>
 
-        <section id="anchor-how-it-works" class="-mt-20">
+        <section id="anchor-how-it-works" class="-mt-20 relative px-5 md:px-[unset]">
             <div class="container mx-auto flex">
-                <div class="w-1/3">
+                <div class="hidden xl:block w-1/3">
                     <img src="/assets/img/how-it-works-img.png" alt="">
                 </div>
-                <div class="w-2/3">
-                    <h2 class="text-4xl mb-10">
+                <div class="w-full xl:w-2/3">
+                    <h2 class="text-4xl mb-10 font-main font-bold">
                         How It Works
                     </h2>
 
                     <div class="mb-8 pl-20 relative">
-                        <h3 class="text-2xl mb-3">Set Up Your Validator Node:</h3>
-                        <p>
+                        <h3 class="text-2xl mb-3 font-main">Set Up Your Validator Node:</h3>
+                        <p class="font-main">
                             Begin by setting up your Solana validator node with the help of Alex S1. Our experts will guide you through the process, ensuring that your node is properly configured for optimal performance and security.
                         </p>
-                        <p class="absolute left-0 top-5 text-5xl text-sol-green">
+                        <p class="absolute left-0 top-5 text-5xl text-sol-green font-main font-black">
                             1.
                         </p>
                     </div>
 
                     <div class="mb-8 pl-20 relative">
-                        <h3 class="text-2xl mb-3">Stake SOL Tokens:</h3>
-                        <p>
+                        <h3 class="text-2xl mb-3 font-main">Stake SOL Tokens:</h3>
+                        <p class="font-main">
                             Begin by setting up your Solana validator node with the help of Alex S1. Our experts will guide you through the process, ensuring that your node is properly configured for optimal performance and security.
                         </p>
-                        <p class="absolute left-0 top-5 text-5xl text-sol-green">
+                        <p class="absolute left-0 top-5 text-5xl text-sol-green font-main font-black">
                             2.
                         </p>
                     </div>
 
                     <div class="mb-8 pl-20 relative">
-                        <h3 class="text-2xl mb-3">Start Earning Rewards:</h3>
-                        <p>
+                        <h3 class="text-2xl mb-3 font-main">Start Earning Rewards:</h3>
+                        <p class="font-main">
                             By successfully validating transactions and contributing to the security of the Solana network, you'll start earning rewards in the form of additional SOL tokens. These rewards serve as an incentive for validators to maintain a high level of performance and reliability.
                         </p>
-                        <p class="absolute left-0 top-5 text-5xl text-sol-green">
+                        <p class="absolute left-0 top-5 text-5xl text-sol-green font-main font-black">
                             3.
                         </p>
                     </div>
 
-                    <p>
+                    <p class="font-main dark:text-sol-green font-regular dark:font-normal">
                         At Alex S1, we simplify the process of becoming a Solana validator, allowing you to focus on maximizing your rewards and making the most of your investment. Let us help you navigate the world of blockchain validation with ease and confidence.
                     </p>
                 </div>
@@ -268,26 +274,26 @@
         </section>
 
         <section id="anchor-faq">
-            <div class="container mx-auto my-20">
-                <h3 class="text-4xl">FAQ</h3>
+            <div class="container mx-auto my-20 px-5 md:px-[unset]">
+                <h3 class="text-4xl font-main font-bold">FAQ</h3>
 
-                <details class="">
-                    <summary class="my-5 px-5 py-5 bg-light-black/5 dark:bg-light-black cursor-pointer">What is a Solana Validator?</summary>
+                <details class="font-main">
+                    <summary class="my-5 px-5 py-5 bg-light-black/5 dark:bg-light-black cursor-pointer font-bold">What is a Solana Validator?</summary>
                     A Solana Validator is a node operator that participates in the Solana network by validating transactions and maintaining the blockchain. Validators play a crucial role in securing the network and ensuring its integrity.
                 </details>
 
-                <details class="">
-                    <summary class="my-5 px-5 py-5 bg-light-black/5 dark:bg-light-black cursor-pointer">How do I become a Solana Validator?</summary>
+                <details class="font-main">
+                    <summary class="my-5 px-5 py-5 bg-light-black/5 dark:bg-light-black cursor-pointer font-bold">How do I become a Solana Validator?</summary>
                     To become a Solana Validator, you need to meet certain technical requirements and have a sufficient amount of SOL tokens to stake. You can find detailed instructions on how to become a validator in the Solana documentation.
                 </details>
 
-                <details class="">
-                    <summary class="my-5 px-5 py-5 bg-light-black/5 dark:bg-light-black cursor-pointer">How are rewards distributed to Solana Validators?</summary>
+                <details class="font-main">
+                    <summary class="my-5 px-5 py-5 bg-light-black/5 dark:bg-light-black cursor-pointer font-bold">How are rewards distributed to Solana Validators?</summary>
                     Rewards for Solana Validators are distributed based on their stake and performance. Validators with a higher stake and better performance are rewarded with a larger share of the block rewards. The reward distribution mechanism is designed to incentivize validators to maintain a high level of performance and security.
                 </details>
 
-                <details class="">
-                    <summary class="my-5 px-5 py-5 bg-light-black/5 dark:bg-light-black cursor-pointer">What security measures are in place for Solana Validators?</summary>
+                <details class="font-main">
+                    <summary class="my-5 px-5 py-5 bg-light-black/5 dark:bg-light-black cursor-pointer font-bold">What security measures are in place for Solana Validators?</summary>
                     Solana Validators implement various security measures to protect the network and the staked tokens. These measures include secure key management, regular software updates, and monitoring for any suspicious activity. Additionally, the Solana network itself has built-in security features to prevent attacks and ensure the integrity of the blockchain.
                 </details>
 
@@ -299,31 +305,31 @@
         <section id="anchor-contact" class="bg-[url(/assets/img/contact-section-bg.svg)] bg-cover bg-no-repeat bg-top h-[775px]">
 
             <div class="container mx-auto flex justify-center">
-                <div class="max-w-3xl p-20 bg-white/75 dark:bg-black/50 rounded-xl">
+                <div class="px-5 md:max-w-3xl md:p-20 bg-white/75 dark:bg-black/50 rounded-xl">
                     <div class="">
-                        <h2 class="text-4xl text-center pb-10">
+                        <h2 class="text-4xl text-center pb-10 font-main font-bold">
                             Contact Us
                         </h2>
-                        <p class="text-center text-sm mb-20">
+                        <p class="text-center text-sm mb-20 font-main">
                             Have a question or ready to get started with Alex S1? Reach out to us using the form below! Our team is here to assist you with any inquiries or assistance you may need. We look forward to hearing from you and helping you optimize your Solana network experience.
                         </p>
                         <form action="" method="post">
                             <div id="wrapper-form-input-name" class="relative">
                                 <input type="text" name="name" id="form-input-name" placeholder="Full Name" class="w-full bg-invisible text:white border-b-2 border-sol-green py-2 my-5">
-                                <label for="form-input-name" class="absolute left-0">Full Name</label>
+                                <label for="form-input-name" class="absolute left-0 font-main">Full Name</label>
                             </div>
 
                             <div id="wrapper-form-input-email" class="relative">
                                 <input type="email" name="email" id="form-input-email" placeholder="E-Mail" class="w-full bg-invisible text:white border-b-2 border-sol-green py-2 my-5">
-                                <label for="form-input-email" class="absolute left-0">E-Mail</label>
+                                <label for="form-input-email" class="absolute left-0 font-main">E-Mail</label>
                             </div>
 
                             <div id="wrapper-form-textarea" class="relative">
                                 <textarea name="message" id="" cols="30" rows="1" placeholder="Message" class="w-full bg-invisible text:white border-b-2 border-sol-green py-2 my-5" id="form-textarea"></textarea>
-                                <label for="form-textarea" class="absolute left-0">Message</label>
+                                <label for="form-textarea" class="absolute left-0 font-main">Message</label>
                             </div>
 
-                            <input type="submit" value="Submit" class="w-full bg-gradient-to-r hover:hue-rotate-15 hover:drop-shadow-sol-light] text-white dark:text-black from-sol-purple to-sol-green px-10 py-2 rounded-full">
+                            <input type="submit" value="Submit" class="w-full font-main bg-gradient-to-r hover:hue-rotate-15 hover:drop-shadow-sol-light] text-white dark:text-black from-sol-purple to-sol-green px-10 py-2 rounded-full">
                         </form>
                     </div>
                 </div>
