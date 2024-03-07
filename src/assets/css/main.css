@@ -151,7 +151,7 @@ html.light #anchor-get-started::after {
   top: 0;
   bottom: 0;
   position: absolute;
-  background: linear-gradient(90deg, rgba(0,0,0,1) calc(120% - 1920px), rgba(0,0,0,0) calc(140% - 1920px));
+  background: linear-gradient(90deg, rgba(255,255,255,1) calc(120% - 1920px), rgba(255,255,255,0) calc(140% - 1920px));
 }
 
 
