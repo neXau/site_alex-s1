@@ -134,7 +134,7 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
   opacity: 0.2;
 }
 
-#anchor-get-started::after {
+html.dark #anchor-get-started::after {
   content: '';
   left: 0;
   right: 0;
@@ -143,6 +143,17 @@ html.light #alexs1-card:hover #alexs1-photo-img img {
   position: absolute;
   background: linear-gradient(90deg, rgba(0,0,0,1) calc(120% - 1920px), rgba(0,0,0,0) calc(140% - 1920px));
 }
+
+html.light #anchor-get-started::after {
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0,0,0,1) calc(120% - 1920px), rgba(0,0,0,0) calc(140% - 1920px));
+}
+
 
 
 /* Form Inputs Style */
